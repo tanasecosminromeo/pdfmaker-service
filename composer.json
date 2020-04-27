@@ -1,0 +1,6 @@
+{
+    "require": {
+        "php": ">=7.3.4",
+        "mikehaertl/phpwkhtmltopdf": "^2.4"
+    }
+}
