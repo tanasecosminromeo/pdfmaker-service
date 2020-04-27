@@ -1,4 +1,4 @@
-PDFMaker Service
+PDFMaker Service v1.0.0
 ==
 
 This micro service gets either HTML content or an URL and converts it to a PDF.
