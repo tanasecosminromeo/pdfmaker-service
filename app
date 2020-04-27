@@ -46,6 +46,11 @@ case "$1" in
 	docker-compose -p ${folder} -f ${DOCKER_COMPOSE_FILE} build
 	exit;
 ;;
+'pull')
+	echo "Pull images for ${folder} services"
+	docker-compose -p ${folder} -f ${DOCKER_COMPOSE_FILE} pull $2 $3
+	exit;
+;;
 'logs')
 	echo Logs ${folder} services
 	docker-compose -p ${folder} -f ${DOCKER_COMPOSE_FILE} logs $2
