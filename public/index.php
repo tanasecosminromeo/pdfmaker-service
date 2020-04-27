@@ -13,8 +13,7 @@ $path = str_replace("/index.php", "/", __FILE__);
 
 $filename = "/tmp/".sha1(@$_SERVER['REMOTE_ADDR'].":".@$_SERVER['HTTP_REFERER'].time().rand(0,9999));
 $url = null;
-$preFiles  = [];
-$postFiles = [];
+
 if (isset($_POST['html'])){
 	$content = str_replace("£", "&pound", $_POST['html']);
 
@@ -93,4 +92,3 @@ echo file_get_contents($filename.".pdf");
 
 @unlink($filename.".html");
 @unlink($filename.".pdf");
-?>
