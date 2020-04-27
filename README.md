@@ -73,6 +73,7 @@ curl -v http://localhost:8111/ \
 
 Future releases
 ==
-1. Will add custom compression. Check https://gist.github.com/firstdoit/6390547 for more info
-2. Will create a composer package to streamline the usage of this service 
-3. Will remove the docker-compose dependency so it will run only with docker
+1. Add error logging & clean code
+2. Will add custom compression. Check https://gist.github.com/firstdoit/6390547 for more info
+3. Will create a composer package to streamline the usage of this service 
+4. Will remove the docker-compose dependency so it will run only with docker
