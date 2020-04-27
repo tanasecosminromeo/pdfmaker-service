@@ -2,23 +2,16 @@
 folder=${PWD##*/}
 DOCKER_COMPOSE_FILE=docker/docker-compose.yml
 
-if [[ ! -f .env ]]; then
-    ./bin/init.sh
-fi
-
-HOST_UID=$(./bin/readenv.sh HOST_UID)
-
-if [[ ${HOST_UID} -ne $(id -u) ]]; then
-    echo "This server can be started just by UID $HOST_UID "
-    exit;
-fi
-
 case "$1" in
 'rsync')
     ./bin/rsync.sh $2 $3
     exit;
 ;;
 'up')
+    if [[ ! -f .env ]]; then
+        ./bin/init.sh
+    fi
+
     HOST_UID=$(id -u)
 	echo Starting ${folder} services under UID ${HOST_UID}
 
